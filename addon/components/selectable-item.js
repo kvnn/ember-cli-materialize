@@ -23,6 +23,9 @@ export default Ember.Component.extend({
       else {
         group.setValueSelection(this.get('value'), val);
       }
+      if (this.get('action')) {
+        this.sendAction();
+      }
       return !!val;
     }
   }),
